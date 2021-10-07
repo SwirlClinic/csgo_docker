@@ -4,6 +4,7 @@ ENV STEAMAPPID 740
 ENV STEAMAPP csgo
 ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated"
 ENV CUSTOM_CONFIG_DIR "${HOMEDIR}/custom-config"
+ENV SERVE_DIR "${HOMEDIR}/serve"
 ENV METAMOD_VERSION 1.11
 ENV SOURCEMOD_VERSION 1.11
 
@@ -38,6 +39,7 @@ RUN set -x \
 		lib32z1=1:1.2.11.dfsg-1 \
 	&& mkdir -p "${STEAMAPPDIR}" \
 	&& mkdir -p "${CUSTOM_CONFIG_DIR}" \
+	&& mkdir -p "${SERVE_DIR}" \
 	&& { \
 		echo '@ShutdownOnFailedCommand 1'; \
 		echo '@NoPromptForPassword 1'; \
