@@ -5,3 +5,10 @@ Data persistence locations:
 "/home/steam/csgo-dedicated"
 "/home/steam/custom-config"
 "/home/steam/steamcmd" - preferably persisted somewhere but optional
+
+
+Not sure if needed yet:
+add-apt-repository multiverse
+dpkg --add-architecture i386
+apt-get update
+apt-get install lib32gcc1 lib32stdc++6
