@@ -42,7 +42,6 @@ bash "${SERVE_DIR}/srcds_run" -game "${STEAMAPP}" -console -autoupdate \
 			+mapgroup "${SRCDS_MAPGROUP}" \
 			+map "${SRCDS_STARTMAP}" \
 			+sv_setsteamaccount "${SRCDS_TOKEN}" \
-			+sv_region "${SRCDS_REGION}" \
 			+net_public_adr "${SRCDS_NET_PUBLIC_ADDRESS}" \
 			-ip "${SRCDS_IP}" \
 			+host_workshop_collection "${SRCDS_HOST_WORKSHOP_COLLECTION}" \
