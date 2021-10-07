@@ -23,7 +23,7 @@ fi
 
 
 # Copy steamappdir with preserved attributes without overwriting and doing so with symbolic links so we do not have to actually copy
-cp -ans "${STEAMAPPDIR}/*" "${CUSTOM_CONFIG_DIR}"
+cp -ans ${STEAMAPPDIR}/* ${CUSTOM_CONFIG_DIR}
 cd "${CUSTOM_CONFIG_DIR}"
 
 bash "${CUSTOM_CONFIG_DIR}/srcds_run" -game "${STEAMAPP}" -console -autoupdate \
