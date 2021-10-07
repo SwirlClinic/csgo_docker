@@ -39,6 +39,7 @@ RUN set -x \
 		lib32z1=1:1.2.11.dfsg-1 \
 	&& mkdir -p "${STEAMAPPDIR}" \
 	&& mkdir -p "${CUSTOM_CONFIG_DIR}" \
+	&& rm -rf "${SERVE_DIR}" \
 	&& mkdir -p "${SERVE_DIR}" \
 	&& { \
 		echo '@ShutdownOnFailedCommand 1'; \
