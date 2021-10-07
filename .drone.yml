@@ -1,0 +1,12 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: build-image
+    image: plugins/docker
+    settings:
+      username: etrang
+      password:
+        from_secret: pass
+      repo: etrang/csgo
+      tags: latest
