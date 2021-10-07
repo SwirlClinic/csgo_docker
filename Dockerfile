@@ -39,7 +39,7 @@ RUN set -x \
 		lib32z1=1:1.2.11.dfsg-1 \
 	&& mkdir -p "${STEAMAPPDIR}" \
 	&& mkdir -p "${CUSTOM_CONFIG_DIR}" \
-	&& mkdir -m 755 -p "${SERVE_DIR}" \
+	&& mkdir -p "${SERVE_DIR}" \
 	&& { \
 		echo '@ShutdownOnFailedCommand 1'; \
 		echo '@NoPromptForPassword 1'; \
@@ -49,7 +49,7 @@ RUN set -x \
 		echo 'quit'; \
 	   } > "${HOMEDIR}/${STEAMAPP}_update.txt" \
 	&& chmod +x "${HOMEDIR}/entry.sh" \
-	&& chown -R "${USER}:${USER}" "${HOMEDIR}/entry.sh" "${STEAMAPPDIR}" "${HOMEDIR}/${STEAMAPP}_update.txt" \	
+	&& chown -R "${USER}:${USER}" "${HOMEDIR}/entry.sh" "${STEAMAPPDIR}" "${HOMEDIR}/${STEAMAPP}_update.txt" "${CUSTOM_CONFIG_DIR}" "${SERVE_DIR}" \	
 	&& rm -rf /var/lib/apt/lists/* 
 
 USER ${USER}
