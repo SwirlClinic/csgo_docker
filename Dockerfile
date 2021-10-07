@@ -1,12 +1,12 @@
 FROM cm2network/steamcmd:root
 
-ENV STEAMAPPID 740 \
-	STEAMAPP csgo \
-	STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated" \
-	CUSTOM_CONFIG_DIR "${HOMEDIR}/custom-config" \
-	SERVE_DIR "${HOMEDIR}/serve" \
-	METAMOD_VERSION 1.11 \
-	SOURCEMOD_VERSION 1.11
+ENV STEAMAPPID 740 
+ENV STEAMAPP csgo 
+ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated" 
+ENV CUSTOM_CONFIG_DIR "${HOMEDIR}/custom-config" 
+ENV SERVE_DIR "${HOMEDIR}/serve" 
+ENV METAMOD_VERSION 1.11 
+ENV SOURCEMOD_VERSION 1.11
 
 ENV SRCDS_FPSMAX=300 \
 	SRCDS_TICKRATE=128 \
@@ -39,7 +39,7 @@ RUN set -x \
 		lib32z1=1:1.2.11.dfsg-1 \
 	&& mkdir -p "${STEAMAPPDIR}" \
 	&& mkdir -p "${CUSTOM_CONFIG_DIR}" \
-	&& mkdir -p "${SERVE_DIR}" \
+	&& mkdir -m 755 -p "${SERVE_DIR}" \
 	&& { \
 		echo '@ShutdownOnFailedCommand 1'; \
 		echo '@NoPromptForPassword 1'; \

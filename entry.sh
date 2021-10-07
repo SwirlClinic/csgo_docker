@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Copypasta'd from https://github.com/CM2Walki/CSGO/blob/master/etc/entry.sh
-mkdir -p "${STEAMAPPDIR}" || true  
-mkdir -m 755 -p "${SERVE_DIR}" || true  
+mkdir -p "${STEAMAPPDIR}" || true   
 
 bash "${STEAMCMDDIR}/steamcmd.sh" +login anonymous \
 				+force_install_dir "${STEAMAPPDIR}" \
